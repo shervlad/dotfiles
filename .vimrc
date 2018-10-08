@@ -39,6 +39,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'powerman/vim-plugin-autosess'
 call vundle#end()
 
 filetype plugin indent on    " enables filetype detection
@@ -65,6 +67,8 @@ set nu
 "oo for new line in normal mode
 nmap oo o<Esc>
 nmap <Space><Space> i<Space><Esc>
+"
+map <C-/> ^i//<Esc>''
 "nmap <tab> ^i<Space><Space><Space><Space><Esc>l
 "nmap <S-tab>   ^i<BS><BS><BS><BS><Esc>l
 :imap jj <Esc>l
@@ -137,7 +141,7 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 "Color scheme stuff
 set t_Co=256
 set background=dark
-colorscheme darkblue
+colorscheme elflord
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
