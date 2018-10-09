@@ -52,6 +52,9 @@ let g:ycm_autoclose_preview_window_after_completion=1
 "custom keys
 let mapleader=" "
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+
+map <C-n> :NERDTreeToggle<CR>
 "
 "call togglebg#map("<F5>")
 set guifont=Monaco:h14
@@ -73,14 +76,6 @@ map <C-/> ^i//<Esc>''
 "nmap <S-tab>   ^i<BS><BS><BS><BS><Esc>l
 :imap jj <Esc>l
 "python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
 
 "it would be nice to set tag files by the active virtualenv here
 ":set tags=~/mytags "tags for ctags and taglist
@@ -137,6 +132,7 @@ autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 
 "js stuff"
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType c setlocal shiftwidth=2 tabstop=2
 
 "Color scheme stuff
 set t_Co=256
