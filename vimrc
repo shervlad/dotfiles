@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
+Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'VundleVim/Vundle.vim'
 "git interface
 Plugin 'tpope/vim-fugitive'
