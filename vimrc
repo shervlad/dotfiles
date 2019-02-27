@@ -61,6 +61,7 @@ map <C-n> :NERDTreeToggle<CR>
 set guifont=Monaco:h14
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let g:NERDTreeShowLineNumbers=0
 
 "I don't like swap files
 set noswapfile
@@ -127,6 +128,9 @@ autocmd FileType c set foldmethod=syntax
 "use space to open folds
 nnoremap <space> za 
 
+
+
+
 autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
 autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 "----------Stop python PEP 8 stuff--------------
@@ -181,3 +185,8 @@ augroup END
 
 
 nnoremap <leader>. :CtrlPTag<cr>
+
+"navigate between tabs
+nnoremap <C-l> gt
+
+nnoremap <C-h> gT
